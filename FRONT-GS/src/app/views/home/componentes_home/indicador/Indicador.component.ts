@@ -1,9 +1,7 @@
 import {
   ConteudosService
 } from '../../../../services/service_conteudos/conteudos.service';
-import {
-  Conteudo
-} from '../../../../models/conteudos.model';
+
 import {
   Component,
   EventEmitter,
@@ -13,63 +11,28 @@ import {
   Router
 } from '@angular/router';
 import * as bootstrap from 'bootstrap';
-import {
-  OwlOptions
-} from 'ngx-owl-carousel-o';
-import {
-  Pipe,
-  PipeTransform
-} from '@angular/core';
-import {
-  DomSanitizer,
-  SafeResourceUrl
-} from '@angular/platform-browser';
 
 import Chart from 'chart.js/auto'
 
 @Component({
   selector: 'app-materiais_digitais',
-  templateUrl: './materiais_digitais.component.html',
-  styleUrls: ['./materiais_digitais.component.scss'],
+  templateUrl: './indicador.component.html',
+  styleUrls: ['./indicador.component.scss'],
 })
-export class NewMateriais_digitaisComponent {
+export class NewIndicadorComponent {
   chart: any;
-  segmentoSelected ? : any;
-  componenteSelected ? : any;
-  serieSelected ? : any;
-  token ? : any;
-  myToken ? : any;
-  conteudosParam: any;
-  conteudosGeral: any;
-  componenteParam: any;
-  serieParam: any;
-  tipoConteudoParam: any;
   regiao ? : any;
-  listaSegmentos: any;
-  listaSerie: any;
-  listaTipoConteudo: any[];
-  listaTipoConteudoSemDuplicado: any;
-  listaSemIdDuplicado: any[];
   conteudos: any;
   returnInd ? : any;
   titulo ? : any;
   anos ? : any;
   item: any;
-  tipoConteudo ? : number;
-  urlConteudo ? : string;
-  current ? : number;
-  islogged ? : boolean;
   cont ? : any;
   codigo : any;
-  linkConteudo: any;
-  idTipoConteudo: any;
-  frame: any;
-  tipo: any;
   i: any = 8;
-  public safeSrc ? : any;
-  constructor(private service: ConteudosService, private router: Router, private sanitizer: DomSanitizer) {
-    this.listaTipoConteudo = [];
-    this.listaSemIdDuplicado = [];
+
+  constructor(private service: ConteudosService, private router: Router) {
+
   }
   ngOnInit() {
 

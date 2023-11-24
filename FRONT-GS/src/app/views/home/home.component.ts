@@ -14,11 +14,5 @@ export class NewHomeComponent {
   tipo: any;
   constructor(private service: ConteudosService, private router: Router) { }
   ngOnInit(){
-    
-  }
-  alinharTipos(){
-    this.tipo = document.getElementsByClassName("owl-item");
-    $("#conte .owl-item").removeAttr("style");
-    // this.tipo.setAttribute("style", "width:155px;");
   }
 }

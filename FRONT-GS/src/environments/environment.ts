@@ -4,10 +4,7 @@
 
 export const environment = {
   production: false,
-  // urlApi: "http://192.168.1.6:5968/",
   urlApi: "https://localhost:44366/api/",
-  //urlApi: "https://leblivre.editoradobrasil.com.br/api/",
-  urlLogo: "https://leblivre.editoradobrasil.com.br/site_editorial/admPortais/upload/leb-livre/logo/"
 };
 
 /*

@@ -22,6 +22,11 @@ namespace Business
             return _obsDao.BuscarObjetivos(repository);
         }
 
+        public List<ObjetivoIndicador> BuscarObjetivosIndicadores(IRepositoryBase repository)
+        {
+            return _obsDao.BuscarObjetivosIndicadores(repository);
+        }
+
         public IEnumerable<Indicador> BuscarIndicador(IRepositoryBase repository, string codigo)
         {
             return _obsDao.BuscarIndicador(repository, codigo);

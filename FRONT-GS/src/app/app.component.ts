@@ -11,7 +11,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'LEB_LIVRE';
+  title = 'ODS3';
   currentNavItem?: string;
   public loading = false;
   ngOnInit() {

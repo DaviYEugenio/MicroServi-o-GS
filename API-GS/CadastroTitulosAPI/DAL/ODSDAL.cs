@@ -51,6 +51,46 @@ namespace DAL
             }
         }
 
+        public List<ObjetivoIndicador> BuscarObjetivosIndicadores(IRepositoryBase repository)
+        {
+            SqlConnection con = new SqlConnection(repository.ConnectionString);
+            StringBuilder strSql = new StringBuilder();
+
+            try
+            {
+                con.Open();
+
+                strSql.AppendLine("SELECT  distinct o.brasil, o.global, i.descricao");
+                strSql.AppendLine("FROM objetivo o");
+                strSql.AppendLine("JOIN ods od ON o.id_objetivo = od.id_objetivo");
+                strSql.AppendLine("JOIN indicador i ON od.id_ods = i.id_ods;");
+
+                SqlCommand cmd = new SqlCommand(strSql.ToString(), con);               
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                List<ObjetivoIndicador> lLstObj = new List<ObjetivoIndicador>();
+
+                while (reader.Read())
+                {
+                    ObjetivoIndicador lObj = new ObjetivoIndicador();
+
+                    // Certifique-se de ajustar os índices de coluna para corresponder à ordem da sua consulta SELECT
+                    lObj.brasil = reader.IsDBNull(0) ? "" : reader.GetString(0);
+                    lObj.global = reader.IsDBNull(1) ? "" : reader.GetString(1);
+                    lObj.descricao = reader.IsDBNull(2) ? "" : reader.GetString(2);
+
+                    lLstObj.Add(lObj);
+                }
+
+                con.Close();
+                return lLstObj;
+            }
+            catch (Exception e)
+            {
+                throw new System.InvalidOperationException("Desculpa, estamos com um problema! Por favor avise a nossa equipe. Erro: " + e.Message);
+            }
+        }
+
 
         public IEnumerable<Indicador> BuscarIndicador(IRepositoryBase repository, string codigo)
         {

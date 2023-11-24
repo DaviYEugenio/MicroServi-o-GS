@@ -29,6 +29,12 @@ namespace CadastroTitulosAPI.Controllers
             return Ok(_seriesMateriaColecaoTitulos.BuscarObjetivos(_repositoryBase));
         }
 
+        [HttpGet("ObjetivosIndicadores")]
+        public ActionResult ObjetivosIndicadores()
+        {
+            return Ok(_seriesMateriaColecaoTitulos.BuscarObjetivosIndicadores(_repositoryBase));
+        }
+
         [HttpPost("Indicador")]
         public ActionResult Indicador([FromBody] Indicador codigo)
         {
