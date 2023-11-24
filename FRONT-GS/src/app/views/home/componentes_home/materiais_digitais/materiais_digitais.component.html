@@ -1,0 +1,64 @@
+<div class="materiais_digitais">
+  <div class="conteudo_materiais">
+    <h1 class="titulo_materiais" id="matDigitais">INDICADORES ODS 3</h1>
+  </div>
+  <div class="form-row cont" style="text-align: center;">
+    <div *ngFor="let conteudo of conteudos" class="form-group col-md-3">
+      <div class="card_conteudo">
+        <div class="component_card">
+          <p class="tipo_conteudo"></p>
+          <h1 class="nome_conteudo">{{conteudo.descricao}}</h1>
+        </div>
+        <div class="card_open">
+          <h1 (click)="openModalIndicador(conteudo.codigo, conteudo.descricao)" class="open">+ INFORMAÇÕES</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-12 d-md-flex justify-content-md-center">
+      <button type="button" id="vermais" (click)="VerMais()" class="btn_mais">ver mais</button>
+      <button type="button" id="vermenos" (click)="VerMenos()" class="btn_mais">ver menos</button>
+    </div>
+  </div>
+  <div class="modal" id="modal_conteudo" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+    <div class="modal-content" style="border: none;">
+      <h1 class="titulo_atividade">{{titulo}}</h1>
+      <div id="frame">
+      <button (click)="dadostabela()"  type="button" class="btn btn btn-success">TABELA</button>
+      <button (click)="dadosgrafico()"  type="button" class="btn btn-primary">GRAFICOS</button>
+    </div>
+    <div id="tabela">
+      <table class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Região</th>
+            <th scope="col" *ngFor="let item of anos">{{item}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let r of regiao">
+            <th scope="row">{{r}}</th>
+            <td *ngFor="let ano of anos">{{obterConsumo(r, ano)}}</td>
+          </tr>
+
+
+        </tbody>
+      </table>
+    </div>
+    <div id="grafico">
+      <select class="form-select" aria-label="Default select example" id="selectRegiao" (change)="changeComponente()">
+        <option selected>Selecione uma região</option>
+        <option *ngFor="let item of returnInd" value="{{item.regiao}}">{{item.regiao}}</option>
+      </select>
+      <div class="grafico">
+      <canvas id="canvas"></canvas>
+    </div>
+    </div>
+      <div class="fechar">
+        <button data-dismiss="modal" type="button" class="btn_close">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+</div>
