@@ -89,13 +89,26 @@ Endpoint GET/ObjetivosIndicadores - ESTE ENDPOINT RETORNA O JSON QUE O PROFESSOR
  
  ## Prints do wireframe:
 Página Inicial:
-1-Homepage
+1- ![FOTO DO SWAGGER COM OS ENDPOINTS](prints/wireframe/home.png)
 
 Página de Indicadores Grafico:
-2-Objetivos
+2- ![FOTO DO SWAGGER COM OS ENDPOINTS](prints/wireframe/grafico.png)
 
 Página de Indicadores Tabela:
-3-Indicadores
+3- ![FOTO DO SWAGGER COM OS ENDPOINTS](prints/wireframe/tabela.png)
+
+## Prints em execução:
+Página Inicial:
+
+Página de Indicadores Grafico:
+
+Página de Indicadores Tabela:
+
+
+## TESTES
+Instruções para execução dos testes de Integração:
+
+PASSO 1: Abra a pasta da API - CadastroTitulosAPI no Visual Studio.
 
 
 
