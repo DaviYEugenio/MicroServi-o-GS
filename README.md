@@ -89,26 +89,49 @@ Endpoint GET/ObjetivosIndicadores - ESTE ENDPOINT RETORNA O JSON QUE O PROFESSOR
  
  ## Prints do wireframe:
 Página Inicial:
+
+
 1- ![FOTO DO SWAGGER COM OS ENDPOINTS](prints/wireframe/home.png)
 
 Página de Indicadores Grafico:
+
+
 2- ![FOTO DO SWAGGER COM OS ENDPOINTS](prints/wireframe/grafico.png)
 
 Página de Indicadores Tabela:
+
+
 3- ![FOTO DO SWAGGER COM OS ENDPOINTS](prints/wireframe/tabela.png)
 
 ## Prints em execução:
 Página Inicial:
 
+![inicial](prints/execucao/inicial.jpg)
+
+Página Inicial Objetivos:
+
+
+![inicial objetivos](prints/execucao/inicialObjetivos.jpg)
+
 Página de Indicadores Grafico:
+
+![graficos](prints/execucao/graficos.jpg)
 
 Página de Indicadores Tabela:
 
+![tabelas](prints/execucao/tabelas.jpg)
 
 ## TESTES
 Instruções para execução dos testes de Integração:
 
 PASSO 1: Abra a pasta da API - CadastroTitulosAPI no Visual Studio.
+PASSO 2: Espere o projeto fazer o build
+PASSO 3: Na aba superior do visual studio vai no menu "TEST"
+PASSO 4: Apos clicar em "TEST" clique em "Run all tests"
+**SEGUE PRINT COM PASSO A PASSO:**
+![como rodar](prints/testes/XUnit/como rodar.jfif)
+
+OBS: PARA RODAR OS TESTES O PROJETO NÃO PODE ESTAR RODANDO
 
 
 
