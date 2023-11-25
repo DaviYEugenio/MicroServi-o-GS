@@ -8,13 +8,9 @@ import { NewIndicadorComponent } from './views/home/componentes_home/indicador/I
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CarouselModule } from 'ngx-owl-carousel-o';
-import { DataTablesModule } from "angular-datatables";
-import { NgxMaskModule, IConfig } from 'ngx-mask';
-import { NgxLoadingModule } from 'ngx-loading';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
+
 
 
 @NgModule({
@@ -31,12 +27,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     ReactiveFormsModule,
     HttpClientModule,
     CommonModule,
-    CarouselModule,
-    DataTablesModule,
-    NgxMaskModule.forRoot(),
-    NgxLoadingModule.forRoot({}),
     NgbModule,
-    MatAutocompleteModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'pt'},

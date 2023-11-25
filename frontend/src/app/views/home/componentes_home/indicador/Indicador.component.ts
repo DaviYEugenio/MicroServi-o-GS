@@ -38,7 +38,7 @@ export class NewIndicadorComponent {
 
     $("#vermenos").hide();
 
-      this.service.teste().subscribe(res => {
+      this.service.getObjetivos().subscribe(res => {
         console.log(res);
         this.limiteConteudo(res);
       });

@@ -15,7 +15,7 @@ export class ConteudosService {
 
   constructor(private httpClient: HttpClient) {
   }
-  teste(): Observable<any>{
+  getObjetivos(): Observable<any>{
     return this.httpClient.get<any>(URL.API + "ODS/Objetivos");
   }
 

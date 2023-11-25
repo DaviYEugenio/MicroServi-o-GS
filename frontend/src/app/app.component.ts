@@ -1,6 +1,5 @@
 import { Component, NgModule } from '@angular/core';
 import * as bootstrap from 'bootstrap';
-import { OwlOptions } from 'ngx-owl-carousel-o';
 
 
 
