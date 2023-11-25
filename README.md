@@ -122,16 +122,53 @@ Página de Indicadores Tabela:
 ![tabelas](prints/execucao/tabelas.jpg)
 
 ## TESTES
-Instruções para execução dos testes de Integração:
+
+Instruções para execução dos testes de Integração - Possui um teste para cada endpoint:
 
 PASSO 1: Abra a pasta da API - CadastroTitulosAPI no Visual Studio.
-PASSO 2: Espere o projeto fazer o build
-PASSO 3: Na aba superior do visual studio vai no menu "TEST"
-PASSO 4: Apos clicar em "TEST" clique em "Run all tests"
+
+PASSO 2: Espere o projeto fazer o build.
+
+PASSO 3: Na aba superior do visual studio vai no menu "TEST".
+
+PASSO 4: Apos clicar em "TEST" clique em "Run all tests".
+
+
 **SEGUE PRINT COM PASSO A PASSO:**
-![como rodar](prints/testes/XUnit/como rodar.jfif)
+
+
+![como rodar](prints/testes/XUnit/comorodar.jfif)
 
 OBS: PARA RODAR OS TESTES O PROJETO NÃO PODE ESTAR RODANDO
+
+## Prints do relatório de execução dos testes de integração utilizando xUnit:
+
+![teste1](prints/testes/XUnit/teste1.jfif)
+
+![teste2](prints/testes/XUnit/teste2.jfif)
+
+![teste3](prints/testes/XUnit/teste3.jfif)
+
+![teste4](prints/testes/XUnit/teste4.jfif)
+
+
+## TESTE K6
+
+Instruções para execução dos teste de carga:
+
+PASSO 1: Abra o CMD na pasta "tests" da API - MicroServi-o-GS\backend\API-GS\CadastroTitulosAPI\tests
+
+PASSO 2: RODE O COMANDO : **k6 run scripts.js**
+
+
+
+## Prints do relatório de execução dos testes de integração utilizando K6:
+
+![testek6](prints/testes/K6/k6teste.png)
+
+
+
+
 
 
 
