@@ -168,7 +168,9 @@ Docker build –t api
 
 FRONT:
 docker build --no-cache -t krish186/ods3-app-image:latest .
-ocker run -d -p 8080:80 krish186/ods3-app-image:latest 
+
+
+docker run -d -p 8080:80 krish186/ods3-app-image:latest 
 
 
 
