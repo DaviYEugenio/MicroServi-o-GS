@@ -17,7 +17,7 @@ import Chart from 'chart.js/auto'
 @Component({
   selector: 'app-materiais_digitais',
   templateUrl: './indicador.component.html',
-  styleUrls: ['./indicador.component.scss'],
+  styleUrls: [],
 })
 export class NewIndicadorComponent {
   chart: any;
@@ -58,7 +58,7 @@ export class NewIndicadorComponent {
           {
             label: regiao,
             data: data,
-            backgroundColor: 'green' // Você pode definir uma cor aqui
+            backgroundColor: 'green'
           }
         ]
       },

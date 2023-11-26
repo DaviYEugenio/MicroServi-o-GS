@@ -1,17 +1,10 @@
 
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
-// Plus imports for other components in your app.
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
+
 @include mat.core();
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
+
 $LEB_LIVRE-primary: mat.define-palette(mat.$indigo-palette);
 $LEB_LIVRE-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
@@ -44,9 +37,6 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-// #conte .owl-item{
-//   width: 145px;
-// }
 .partners .owl-next,
 .partners .owl-prev {
   background: transparent !important;
@@ -116,11 +106,6 @@ body {
   -webkit-user-select: none;
   user-select: none;
   width: 126px;
-}
-@media (max-width: 500px) {
-//   #conte .owl-item{
-//   width: 135px;
-// }
 }
 
 
